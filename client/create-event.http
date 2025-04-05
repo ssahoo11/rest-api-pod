@@ -1,0 +1,10 @@
+POST http://localhost:8080/events
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY2RAZWZnLmNvbSIsImV4cCI6MTc0Mzk1NTg3NCwidXNlcklkIjoxfQ.7VRG8qxz6oZc27kSdDWTBEibcDrstb7tce9QbyDq418
+
+{
+    "name": "networking event updated",
+    "description": "Networking event for tech professionals",
+    "location": "Co-working Space, Downtown, USA",
+    "dateTime": "2025-09-18T17:30:00.000Z"
+}

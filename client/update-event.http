@@ -1,0 +1,9 @@
+PUT http://localhost:8080/events
+Content-Type: application/json
+
+{
+    "name": "networking event",
+    "description": "Networking event for tech professionals",
+    "location": "Co-working Space, Downtown",
+    "dateTime": "2025-09-18T17:30:00.000Z"
+}
