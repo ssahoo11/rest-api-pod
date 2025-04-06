@@ -65,9 +65,49 @@ The `rest-api-pod` project provides a set of APIs for user authentication and ev
 
 4. The server will start on `localhost` at port `8080`.
 
+## Instructions to Run REST API Server on Kubernetes Pod
+
+This guide explains how to deploy the REST API server from this repository to a Kubernetes pod.
+
+### Prerequisites
+
+- **Docker**: To build the Docker image.
+- **Kubernetes**: A Kubernetes cluster (you can use Minikube for local development).
+- **kubectl**: Command-line tool for interacting with Kubernetes.
+
+### Steps to Deploy on Kubernetes Pod
+
+Build the Docker image for the REST API server:
+
+```bash
+docker build -t rest-api-pod:latest .
+```
+Create Kubernetes Deployment
+```bash
+kubectl apply -f deployment.yaml
+```
+Expose the Pod as a Service
+```bash
+kubectl apply -f service.yaml
+```
+Access the REST API
+```bash
+minikube service rest-api-pod --url
+```
+Or
+```bash
+kubectl get svc rest-api-service
+```
+
+
 ## Client Folder
 
 In the client folder, you will find all the HTTP files required to interact with the APIs. You can run these files using the REST API extension in Visual Studio Code.
+
+Or using curl tool from bash
+```bash
+curl -get https://<url>:8080/events
+```
 
 ## Contributing
 
