@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-api-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest-api-pod
+  template:
+    metadata:
+      labels:
+        app: rest-api-pod
+    spec:
+      containers:
+        - name: rest-api-pod
+          image: ssahoo1d/rest-api-pod:latest   # Use your image name here
+          ports:
+            - containerPort: 8080
+
