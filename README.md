@@ -1,7 +1,3 @@
-# rest-api-pod
-Here's a sample README file content for your GitHub project `rest-api-pod`:
-
-
 # Rest API Pod
 
 ## Overview
